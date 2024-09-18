@@ -1,0 +1,26 @@
+\documentclass[]{article}
+
+\usepackage[inlcmnts]{flagderiv}
+\newcommand{\implies}{\Rightarrow}
+\newcommand{\biImplication}{\leftrightarrow}
+
+
+\inlcmnts
+\begin{document}
+% \setlength{\derivskip}{4pt}
+\begin{flagderiv}
+
+
+\assume{}{P \biImplication q}{}
+\assume{}{\neg (P \wedge Q) }{}
+\assume{}{P}{}
+\conclude{}{ \biImplication - elim on (1) }{}
+
+\step{}{P}{}
+\conclude{}{Q \implies P}{}
+\conclude{}{test }{}
+\conclude{}{P \implies Q \implies P}{}
+
+
+\end{flagderiv}
+\end{document}
